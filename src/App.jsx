@@ -61,33 +61,23 @@ export default function App() {
             +91 98470 30110
           </a>
 
-          <div className="contact-links">
+          <div className="contact-buttons-group">
             <a
               href={`tel:${rawNumber}`}
-              className="editorial-link"
+              className="atelier-btn"
               aria-label="Call +91 98470 30110"
             >
               Call
             </a>
-            <span className="link-dot" aria-hidden="true" />
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="editorial-link"
+              className="atelier-btn"
               aria-label="Chat on WhatsApp"
             >
               WhatsApp
             </a>
-            <span className="link-dot" aria-hidden="true" />
-            <button
-              type="button"
-              onClick={handleCopy}
-              className="editorial-link"
-              aria-label="Copy phone number"
-            >
-              {copied ? 'Copied' : 'Copy'}
-            </button>
           </div>
 
           <div className="copy-toast" aria-live="polite">
