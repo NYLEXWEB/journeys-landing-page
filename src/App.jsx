@@ -35,9 +35,9 @@ export default function App() {
         </div>
       </header>
 
-      {/* Centerpiece Stage */}
+      {/* Centerpiece Stage without white card */}
       <main className="main-stage">
-        <article className="curation-card">
+        <div className="content-wrapper">
           {/* Client Logo */}
           <div className="logo-container">
             <img
@@ -55,9 +55,12 @@ export default function App() {
             <h1 className="heading">
               we are curating your trip.
             </h1>
-            <p className="subtitle">
-              will be back soon.
-            </p>
+
+            <div className="subtitle-wrapper">
+              <p className="subtitle">
+                will be back soon.
+              </p>
+            </div>
           </div>
 
           {/* Contact Section */}
@@ -105,7 +108,7 @@ export default function App() {
               {copied && <span>Phone number copied to clipboard</span>}
             </div>
           </div>
-        </article>
+        </div>
       </main>
 
       {/* Subtle Bottom Bar */}
