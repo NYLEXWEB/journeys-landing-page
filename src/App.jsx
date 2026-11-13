@@ -21,104 +21,84 @@ export default function App() {
   }
 
   return (
-    <div className="app-container">
-      <div className="bg-overlay" aria-hidden="true" />
+    <div className="canvas-wrapper">
+      <div className="canvas-overlay" aria-hidden="true" />
 
-      {/* Top Bar */}
-      <header className="top-bar">
-        <div className="top-badge">
-          <span className="top-badge-dot" />
-          <span>Curating Itineraries</span>
+      {/* Main Editorial Stage */}
+      <main className="atelier-stage">
+        {/* Client Logo */}
+        <div className="logo-frame">
+          <img
+            src="/logo.png"
+            alt="Journeys"
+            className="brand-logo"
+            loading="eager"
+          />
         </div>
-        <div className="top-location">
-          <span>Kerala, India</span>
-        </div>
-      </header>
 
-      {/* Centerpiece Stage without white card */}
-      <main className="main-stage">
-        <div className="content-wrapper">
-          {/* Client Logo */}
-          <div className="logo-container">
-            <img
-              src="/logo.png"
-              alt="Journeys"
-              className="brand-logo"
-              loading="eager"
-            />
+        <div className="hairline-rule" aria-hidden="true" />
+
+        {/* Editorial Messages */}
+        <div className="editorial-copy">
+          <h1 className="main-headline">
+            we are curating your trip.
+          </h1>
+
+          <p className="back-soon-text">
+            will be back soon.
+          </p>
+        </div>
+
+        {/* Contact Experience */}
+        <div className="contact-atelier">
+          <p className="contact-preface">please reach us on</p>
+
+          <a
+            href={`tel:${rawNumber}`}
+            className="phone-display"
+            title="Call +91 98470 30110"
+          >
+            +91 98470 30110
+          </a>
+
+          <div className="contact-links">
+            <a
+              href={`tel:${rawNumber}`}
+              className="editorial-link"
+              aria-label="Call +91 98470 30110"
+            >
+              Call
+            </a>
+            <span className="link-dot" aria-hidden="true" />
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="editorial-link"
+              aria-label="Chat on WhatsApp"
+            >
+              WhatsApp
+            </a>
+            <span className="link-dot" aria-hidden="true" />
+            <button
+              type="button"
+              onClick={handleCopy}
+              className="editorial-link"
+              aria-label="Copy phone number"
+            >
+              {copied ? 'Copied' : 'Copy'}
+            </button>
           </div>
 
-          <div className="divider" aria-hidden="true" />
-
-          {/* Core Messages */}
-          <div className="text-group">
-            <h1 className="heading">
-              we are curating your trip.
-            </h1>
-
-            <div className="subtitle-wrapper">
-              <p className="subtitle">
-                will be back soon.
-              </p>
-            </div>
-          </div>
-
-          {/* Contact Section */}
-          <div className="contact-section">
-            <p className="contact-label">please reach us on</p>
-
-            <div className="phone-link-wrapper">
-              <a
-                href={`tel:${rawNumber}`}
-                className="phone-number"
-                title="Call +91 98470 30110"
-              >
-                +91 98470 30110
-              </a>
-            </div>
-
-            <div className="actions-row">
-              <a
-                href={`tel:${rawNumber}`}
-                className="action-btn"
-                aria-label="Call +91 98470 30110"
-              >
-                Call
-              </a>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="action-btn"
-                aria-label="Chat on WhatsApp"
-              >
-                WhatsApp
-              </a>
-              <button
-                type="button"
-                onClick={handleCopy}
-                className="action-btn"
-                aria-label="Copy phone number"
-              >
-                {copied ? 'Copied' : 'Copy'}
-              </button>
-            </div>
-
-            <div className="copy-feedback" aria-live="polite">
-              {copied && <span>Phone number copied to clipboard</span>}
-            </div>
+          <div className="copy-toast" aria-live="polite">
+            {copied && <span>Number copied to clipboard</span>}
           </div>
         </div>
       </main>
 
-      {/* Subtle Bottom Bar */}
-      <footer className="footer-bar">
-        <span className="footer-left">
-          &copy; {CURRENT_YEAR} Journeys. All rights reserved.
-        </span>
-        <span className="footer-right">
-          Bespoke Kerala Travel Atelier
-        </span>
+      {/* Quiet Minimal Footer */}
+      <footer className="atelier-footer">
+        <span>&copy; {CURRENT_YEAR} Journeys</span>
       </footer>
     </div>
   )
