@@ -56,15 +56,12 @@ export default function App() {
             className="inline-flex flex-col text-[#fffaf0]"
             href="/"
           >
-            <span className="font-display text-[1.75rem] sm:text-[2.2rem] lg:text-[2.5rem] leading-[0.85] tracking-[-0.035em]">
-              Journeys
-            </span>
-            <span className="mt-1.5 sm:mt-2 flex items-center gap-2.5 sm:gap-3">
-              <span className="h-px w-5 sm:w-7 bg-[#d8c7a4]" />
-              <span className="text-[0.55rem] sm:text-[0.62rem] font-medium uppercase tracking-[0.32em] text-[#eee2cd]">
-                By Jibu Thomas
-              </span>
-            </span>
+            <img
+              alt="Journeys"
+              className="h-22 sm:h-18 lg:h-28 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(255,252,245,0.6)]"
+              src="/logo.png"
+            />
+
             <span className="mt-1 sm:mt-1.5 pl-7 sm:pl-10 text-[0.5rem] sm:text-[0.54rem] uppercase tracking-[0.22em] text-[#d9cfba]">
               Kerala · South India
             </span>
