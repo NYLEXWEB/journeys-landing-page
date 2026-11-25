@@ -49,28 +49,35 @@ export default function App() {
 
       {/* Single Viewport Container - Zero Scroll Across All Screens */}
       <div className="relative z-10 mx-auto flex h-full max-h-[100dvh] w-full max-w-[1440px] flex-col justify-between px-5 py-4 sm:px-8 sm:py-6 lg:px-14 lg:py-8">
-        {/* Header */}
-        <header className="flex-shrink-0 flex items-start justify-between">
+        {/* Header - Luxury Frosted Atelier Capsule for 100% Logo Contrast */}
+        <header className="flex-shrink-0 flex items-center justify-between gap-4">
           <a
             aria-label="Journeys by Jibu Thomas, home"
-            className="inline-flex flex-col text-[#fffaf0]"
+            className="group relative inline-flex items-center gap-3 sm:gap-4 rounded-xl sm:rounded-2xl bg-[#fffcf5]/94 px-3.5 py-2 sm:px-5 sm:py-2.5 shadow-[0_12px_36px_rgba(10,24,16,0.35),0_2px_8px_rgba(0,0,0,0.08)] backdrop-blur-xl border border-[#e9e0d2] transition-all duration-300 hover:bg-[#fffcf5] hover:shadow-[0_16px_44px_rgba(10,24,16,0.45)] hover:-translate-y-0.5"
             href="/"
           >
             <img
               alt="Journeys"
-              className="h-22 sm:h-18 lg:h-28 w-auto object-contain filter drop-shadow-[0_0_15px_rgba(255,252,245,0.6)]"
+              className="h-8 sm:h-10 lg:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               src="/logo.png"
             />
-
-            <span className="mt-1 sm:mt-1.5 pl-7 sm:pl-10 text-[0.5rem] sm:text-[0.54rem] uppercase tracking-[0.22em] text-[#d9cfba]">
-              Kerala · South India
-            </span>
+            <div className="h-7 sm:h-8 w-px bg-[#8b5e35]/35" />
+            <div className="flex flex-col justify-center text-left">
+              <span className="text-[0.58rem] sm:text-[0.66rem] font-semibold uppercase tracking-[0.28em] text-[#8b5e35]">
+                By Jibu Thomas
+              </span>
+              <span className="mt-0.5 text-[0.48rem] sm:text-[0.54rem] font-medium uppercase tracking-[0.2em] text-[#183d2b]/85">
+                Kerala · South India
+              </span>
+            </div>
           </a>
 
-          <p className="hidden items-center gap-2 text-[0.62rem] uppercase tracking-[0.24em] text-[#ece2cf]/80 sm:flex">
-            <span className="h-1 w-1 rounded-full bg-[#d8c7a4]" />
-            A new chapter, soon
-          </p>
+          <div className="hidden sm:inline-flex items-center gap-2 rounded-full bg-[#fffcf5]/15 px-3.5 py-1.5 backdrop-blur-md border border-[#f0e4d0]/25 shadow-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#d8c7a4] animate-pulse" />
+            <span className="text-[0.6rem] font-medium uppercase tracking-[0.22em] text-[#eee2cd]">
+              A new chapter, soon
+            </span>
+          </div>
         </header>
 
         {/* Central Content Area - Dynamically Balanced */}
